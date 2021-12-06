@@ -1,0 +1,16 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.studentRow {
+  color: blue;
+  display: flex;
+}
+
+.studentData {
+  width: 200px;
+}
+
+.name {
+  font-weight: bold;
+}
