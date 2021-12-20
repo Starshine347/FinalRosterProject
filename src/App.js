@@ -1,11 +1,13 @@
 import "./styles.css";
 
-function createRosterItem(studentName, studentPronouns, studentHS) {
+function createRosterItem(persondata) {
   let rosterItem = (
     <div className="studentRow">
-      <div className="studentData name">{studentName}</div>
-      <div className="studentData pronouns">{studentPronouns}</div>
-      <div className="studentData highschool">{studentHS}</div>
+      <div className="studentData name">
+        {persondata.fn + " " + persondata.ln}
+      </div>
+      <div className="studentData pronouns">{persondata.pr}</div>
+      <div className="studentData highschool">{persondata.sc}</div>
     </div>
   );
   return rosterItem;
@@ -32,7 +34,7 @@ export default function App() {
   let elements = [];
 
   elements = people.map(function (person) {
-    return createRosterItem(person.fn, person.pr, person.sc);
+    return createRosterItem(person);
   });
 
   return (
